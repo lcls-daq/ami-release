@@ -63,53 +63,21 @@ ifeq ($(findstring x86_64-rhel6,$(tgt_arch)),)
 projects += qt
 endif
 
-# RHEL6 specific projects
-ifneq ($(findstring x86_64-rhel6,$(tgt_arch)),)
- projects += picam
-endif
-
 projects += \
       pdsdata \
       boost \
       ndarray \
       qwt \
       psalg \
-      python
-
-ifneq ($(filter pds, $(rprojects)),)
-  projects += \
-      acqiris \
-      evgr \
-      leutron \
-      edt \
-      epics \
-      offlinedb \
-      libdc1394 \
-      pvcam \
-      relaxd \
-      fli \
-      andor \
-      libusb \
-      usdusb4 \
-      pds \
-      pdsapp
-
-  pds_use        := release
-  pdsapp_use     := release
-  timetool_use   := release
-else
-  projects += \
+      python \
       epics
-  timetool_use   := /reg/g/pcds/dist/pds/7.6.7-p8.0.10/build/timetool
-  timetool_use_include    := $(timetool_use)/include
-  timetool_use_lib_x86_64 := $(timetool_use)/lib/x86_64-linux-opt
-endif
+
+timetool_use            := /reg/g/pcds/dist/pds/8.0.3-p8.1.8/build/timetool
+timetool_use_include    := $(timetool_use)/include
+timetool_use_lib_x86_64 := $(timetool_use)/lib/x86_64-linux-opt
 
 projects += timetool
 
-ifneq ($(filter ami, $(rprojects)),)
-  projects += gsl ami
-  ami_use := release
-endif
-
+projects += gsl ami
+ami_use := release
 
