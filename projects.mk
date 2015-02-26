@@ -72,7 +72,7 @@ projects += \
       python \
       epics
 
-timetool_use            := /reg/g/pcds/dist/pds/8.0.5.a-p8.1.10/build/timetool
+timetool_use            := /reg/g/pcds/dist/pds/8.2.1-p8.2.0/build/timetool
 timetool_use_include    := $(timetool_use)/include
 timetool_use_lib_x86_64 := $(timetool_use)/lib/x86_64-linux-opt
 
