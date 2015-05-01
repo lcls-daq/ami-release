@@ -32,7 +32,7 @@ gsl_use        := /reg/g/pcds/package/external/gsl-1.13
 boost_use      := /reg/common/package/boost/1.49.0-python2.7/x86_64-rhel5-gcc41-opt/
 ndarray_use    := /reg/common/package/ndarray/1.1.3/x86_64-rhel5-gcc41-opt
 psalg_use      := /reg/common/package/psalg/1.0.9
-pdsdata_use    := /reg/common/package/pdsdata/8.2.4
+pdsdata_use    := /reg/common/package/pdsdata/8.2.7
 #pdsdata_use    := /reg/common/package/pdsdata/devel
 
 #
@@ -74,7 +74,7 @@ projects += \
 
 timetool_use            := /reg/g/pcds/dist/pds/8.2.1-p8.2.0/build/timetool
 timetool_use_include    := $(timetool_use)/include
-timetool_use_lib_x86_64 := $(timetool_use)/lib/x86_64-linux-opt
+timetool_use_lib_x86_64 := $(timetool_use)/lib/x86_64-linux-dbg
 
 projects += timetool
 
