@@ -1,12 +1,22 @@
 ifneq ($(findstring linux,$(tgt_arch)),)
+qtincdir  := qt/include
 qtlibdir  := qt/QtGui qt/QtCore
 qtslibdir :=
-#ifneq ($(findstring x86_64,$(tgt_arch)),)
-#qtincdir  := qt/include_64
-#else
+else
+ifneq ($(findstring rhel6,$(tgt_arch)),)
+qtincdir  := 
+qtlibdir  := 
+qtslibdir := $(USRLIBDIR)/QtGui $(USRLIBDIR)/QtCore
+else
+ifneq ($(findstring rhel7,$(tgt_arch)),)
 qtincdir  := qt/include
-#endif
+qtlibdir  := qt/QtGui qt/QtCore
+qtslibdir :=
+endif
+endif
+endif
 
+ifneq ($(qtincdir),)
 # qwt includes qt headers without package prefix!
 qwtincs := $(qtincdir)/Qt
 qwtincs += $(qtincdir)/Qt3Support
@@ -23,15 +33,7 @@ qwtincs += $(qtincdir)/QtTest
 qwtincs += $(qtincdir)/QtUiTools
 qwtincs += $(qtincdir)/QtXml
 qwtsinc :=
-
 else
-
-ifneq ($(findstring rhel6,$(tgt_arch)),)
-qtincdir  := 
-qtlibdir  := 
-qtslibdir := $(USRLIBDIR)/QtGui $(USRLIBDIR)/QtCore
-endif
-
 qwtincs :=
 qwtsinc := /usr/include/Qt
 qwtsinc += /usr/include/Qt3Support
@@ -47,5 +49,4 @@ qwtsinc += /usr/include/QtSvg
 qwtsinc += /usr/include/QtTest
 qwtsinc += /usr/include/QtUiTools
 qwtsinc += /usr/include/QtXml
-
 endif
