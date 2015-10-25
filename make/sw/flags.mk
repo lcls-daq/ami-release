@@ -1,20 +1,17 @@
 # Architecture flags
 # ------------------
 arch_tgts :=
-arch_tgts_u := i386-linux x86_64-linux x86_64-rhel6 x86_64-rhel7
 arch_opts := opt dbg
 
-arch_tgts_q := $(arch_tgts_u)
-
 src_arch := $(shell uname -r)
-ifeq ($(findstring el5,$(src_arch)),)
-arch_tgts_q := $(filter-out i386-linux x86_64-linux,$(arch_tgts_u))	
+ifneq ($(findstring el5,$(src_arch)),)
+arch_tgts_q := x86_64-linux
 endif
-ifeq ($(findstring el6,$(src_arch)),)
-arch_tgts_q := $(filter-out x86_64-rhel6,$(arch_tgts_u))	
+ifneq ($(findstring el6,$(src_arch)),)
+arch_tgts_q := x86_64-rhel6
 endif
-ifeq ($(findstring el7,$(src_arch)),)
-arch_tgts_q := $(filter-out x86_64-rhel7,$(arch_tgts_u))	
+ifneq ($(findstring el7,$(src_arch)),)
+arch_tgts_q := x86_64-rhel7
 endif
 
 define arch_opt_template
