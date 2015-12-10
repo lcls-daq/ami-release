@@ -73,7 +73,8 @@ projects += \
       epics
 
 #timetool_use            := /reg/g/pcds/dist/pds/8.3.2-p8.2.6/build/timetool
-timetool_use            := /reg/g/pcds/dist/pds/8.6.3-p8.4.3/build/timetool
+#timetool_use            := /reg/g/pcds/dist/pds/8.6.3-p8.4.3/build/timetool
+timetool_use            := /reg/g/pcds/dist/pds/8.7.0-p8.4.6/build/timetool
 timetool_use_include    := $(timetool_use)/include
 timetool_use_lib_x86_64 := $(timetool_use)/lib/x86_64-linux-opt
 
