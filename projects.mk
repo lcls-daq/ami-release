@@ -45,16 +45,19 @@ pdsdata_use    := /reg/common/package/pdsdata/8.8.1
 #
 boost_use_include    := $(boost_use)/include
 boost_use_lib_x86_64 := $(boose_use)/lib
+boost_use_lib_rhel7  := $(boose_use)/lib
 
 ndarray_use_include := $(ndarray_use)
 
 psalg_use_include:= $(psalg_use)/x86_64-linux-opt
 psalg_use_i386   := $(psalg_use)/i386-linux
 psalg_use_x86_64 := $(psalg_use)/x86_64-linux
+psalg_use_rhel7  := $(psalg_use)/x86_64-linux
 
 pdsdata_use_include:= $(pdsdata_use)/i386-linux-opt
 pdsdata_use_i386   := $(pdsdata_use)/i386-linux
 pdsdata_use_x86_64 := $(pdsdata_use)/x86_64-linux
+pdsdata_use_rhel7  := $(pdsdata_use)/x86_64-rhel7
 
 projects :=
 
@@ -73,9 +76,10 @@ projects += \
       epics
 
 #timetool_use            := /reg/g/pcds/dist/pds/8.7.0-p8.4.6/build/timetool
-timetool_use            := /reg/g/pcds/dist/pds/9.1.4-p8.6.13/build/timetool
+timetool_use            := /reg/g/pcds/dist/pds/9.5.2-p8.8.1/build/timetool
 timetool_use_include    := $(timetool_use)/include
 timetool_use_lib_x86_64 := $(timetool_use)/lib/x86_64-linux-opt
+timetool_use_lib_rhel7  := $(timetool_use)/lib/x86_64-rhel7-opt
 
 projects += timetool
 
