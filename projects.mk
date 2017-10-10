@@ -15,6 +15,7 @@ qt_use         := /reg/common/package/qt/4.8.4
 qwt_use        := /reg/g/pcds/package/external/qwt-5.1.1-wfopt-logfix
 #python_use     := /reg/g/pcds/package/python-2.5.2
 python_use     := /reg/common/package/python/2.5.5
+python3_use    := /reg/common/package/python/3.6.1
 libraw1394_use := /reg/g/pcds/package/external/libdc1394
 libdc1394_use  := /reg/g/pcds/package/external/libdc1394
 offlinedb_use  := /reg/g/pcds/package/external/offlinedb-1.5.1
@@ -73,6 +74,7 @@ projects += \
       qwt \
       psalg \
       python \
+      python3 \
       epics
 
 #timetool_use            := /reg/g/pcds/dist/pds/8.7.0-p8.4.6/build/timetool
