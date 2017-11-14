@@ -1,0 +1,3 @@
+[submodule "ami"]
+	path = ami
+	url = https://github.com/lcls-daq/ami.git
