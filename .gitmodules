@@ -1,3 +1,6 @@
 [submodule "ami"]
 	path = ami
 	url = git@github.com:lcls-daq/ami.git
+[submodule "tools"]
+	path = tools
+	url = git@github.com:lcls-daq/tools.git
