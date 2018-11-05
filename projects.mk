@@ -33,8 +33,7 @@ gsl_use        := /reg/g/pcds/package/external/gsl-1.13
 boost_use      := /reg/common/package/boost/1.49.0-python2.7/x86_64-rhel5-gcc41-opt/
 ndarray_use    := /reg/common/package/ndarray/1.1.8
 psalg_use      := /reg/common/package/psalg/1.0.10
-pdsdata_use    := /reg/common/package/pdsdata/8.9.8
-#pdsdata_use    := /reg/common/package/pdsdata/devel
+pdsdata_use    := /reg/common/package/pdsdata/8.9.9
 
 #
 #  *_use_include definitions will create a directory structure under build for
@@ -55,7 +54,7 @@ psalg_use_i386   := $(psalg_use)/i386-linux
 psalg_use_x86_64 := $(psalg_use)/x86_64-linux
 psalg_use_rhel7  := $(psalg_use)/x86_64-linux
 
-pdsdata_use_include:= $(pdsdata_use)/i386-linux-opt
+pdsdata_use_include:= $(pdsdata_use)/x86_64-rhel7-opt
 pdsdata_use_i386   := $(pdsdata_use)/i386-linux
 pdsdata_use_x86_64 := $(pdsdata_use)/x86_64-linux
 pdsdata_use_rhel7  := $(pdsdata_use)/x86_64-rhel7
