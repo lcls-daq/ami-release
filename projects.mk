@@ -30,7 +30,7 @@ relaxd_use     := /reg/g/pcds/package/external/relaxd-1.9.9
 pvcam_use      := /reg/g/pcds/package/external/pvcam2.7.1.7
 picam_use      := /reg/g/pcds/package/external/picam-2.6.1
 gsl_use        := /reg/g/pcds/package/external/gsl-1.13
-boost_use      := /reg/common/package/boost/1.49.0-python2.7/x86_64-rhel5-gcc41-opt/
+boost_use      := /reg/g/pcds/pkg_mgr/release/boost/1.63.0
 ndarray_use    := /reg/common/package/ndarray/1.1.8
 psalg_use      := /reg/common/package/psalg/1.0.10
 pdsdata_use    := /reg/common/package/pdsdata/8.9.10
@@ -43,9 +43,9 @@ pdsdata_use    := /reg/common/package/pdsdata/8.9.10
 #    analogous soft-links for x86_64-linux-* libraries.
 #  Packages without a *_use_include definition will just have a soft-link under build.
 #
-boost_use_include    := $(boost_use)/include
-boost_use_lib_x86_64 := $(boose_use)/lib
-boost_use_lib_rhel7  := $(boose_use)/lib
+boost_use_include    := $(boost_use)/linux-x86_64/include
+boost_use_lib_x86_64 := $(boost_use)/linux-x86_64
+boost_use_lib_rhel7  := $(boost_use)/rhel7-x86_64
 
 ndarray_use_include := $(ndarray_use)
 
