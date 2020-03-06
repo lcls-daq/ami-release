@@ -9,11 +9,9 @@ rprojects := $(wildcard *)
 #  List external package base directories for convenience
 #
 epics_use      := /reg/common/package/epicsca/3.14.12
-#epics_use       := /reg/g/pcds/package/external/epicsca-pcds-R1.0-r410
 evgr_use       := /reg/g/pcds/package/external/evgr_V00-00-05
 qt_use         := /reg/common/package/qt/4.8.4
 qwt_use        := /reg/g/pcds/package/external/qwt-5.1.1-wfopt-logfix
-#python_use     := /reg/g/pcds/package/python-2.5.2
 python_use     := /reg/common/package/python/2.5.5
 python3_use    := /reg/common/package/python/3.6.1
 libraw1394_use := /reg/g/pcds/package/external/libdc1394
@@ -32,8 +30,8 @@ picam_use      := /reg/g/pcds/package/external/picam-2.6.1
 gsl_use        := /reg/g/pcds/package/external/gsl-1.13
 boost_use      := /reg/g/pcds/pkg_mgr/release/boost/1.63.0
 ndarray_use    := /reg/common/package/ndarray/1.1.8
-psalg_use      := /reg/common/package/psalg/1.0.10
-pdsdata_use    := /reg/common/package/pdsdata/8.9.10
+psalg_use      := /reg/common/package/psalg/1.0.11
+pdsdata_use    := /reg/common/package/pdsdata/9.0.2
 
 #
 #  *_use_include definitions will create a directory structure under build for
@@ -44,27 +42,25 @@ pdsdata_use    := /reg/common/package/pdsdata/8.9.10
 #  Packages without a *_use_include definition will just have a soft-link under build.
 #
 boost_use_include    := $(boost_use)/linux-x86_64/include
-boost_use_lib_x86_64 := $(boost_use)/linux-x86_64
-boost_use_lib_rhel7  := $(boost_use)/rhel7-x86_64
+boost_use_lib_x86_64 := $(boost_use)/linux-x86_64/lib
+boost_use_lib_rhel6  := $(boost_use)/rhel6-x86_64/lib
+boost_use_lib_rhel7  := $(boost_use)/rhel7-x86_64/lib
 
 ndarray_use_include := $(ndarray_use)
 
 psalg_use_include:= $(psalg_use)/x86_64-linux-opt
 psalg_use_i386   := $(psalg_use)/i386-linux
 psalg_use_x86_64 := $(psalg_use)/x86_64-linux
-psalg_use_rhel7  := $(psalg_use)/x86_64-linux
+psalg_use_rhel6  := $(psalg_use)/x86_64-rhel6
+psalg_use_rhel7  := $(psalg_use)/x86_64-rhel7
 
 pdsdata_use_include:= $(pdsdata_use)/x86_64-rhel7-opt
 pdsdata_use_i386   := $(pdsdata_use)/i386-linux
 pdsdata_use_x86_64 := $(pdsdata_use)/x86_64-linux
+pdsdata_use_rhel6  := $(pdsdata_use)/x86_64-rhel6
 pdsdata_use_rhel7  := $(pdsdata_use)/x86_64-rhel7
 
 projects :=
-
-# RHEL6 has qt in its distribution
-ifeq ($(findstring x86_64-rhel6,$(tgt_arch)),)
-projects += qt
-endif
 
 projects += \
       pdsdata \
@@ -74,12 +70,13 @@ projects += \
       psalg \
       python \
       python3 \
-      epics
+      epics \
+      qt
 
-#timetool_use            := /reg/g/pcds/dist/pds/8.7.0-p8.4.6/build/timetool
-timetool_use            := /reg/g/pcds/dist/pds/9.5.7-p8.8.4/build/timetool
+timetool_use            := /reg/g/pcds/dist/pds/10.0.1-p9.0.2/build/timetool
 timetool_use_include    := $(timetool_use)/include
 timetool_use_lib_x86_64 := $(timetool_use)/lib/x86_64-linux-opt
+timetool_use_lib_rhel6  := $(timetool_use)/lib/x86_64-linux-opt
 timetool_use_lib_rhel7  := $(timetool_use)/lib/x86_64-rhel7-opt
 
 projects += timetool
