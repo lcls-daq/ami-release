@@ -31,7 +31,7 @@ gsl_use        := /reg/g/pcds/package/external/gsl-1.13
 boost_use      := /reg/g/pcds/pkg_mgr/release/boost/1.63.0
 ndarray_use    := /reg/common/package/ndarray/1.1.8
 psalg_use      := /reg/common/package/psalg/1.0.11
-pdsdata_use    := /reg/common/package/pdsdata/9.0.2
+pdsdata_use    := /reg/common/package/pdsdata/9.0.3
 
 #
 #  *_use_include definitions will create a directory structure under build for
@@ -73,7 +73,7 @@ projects += \
       epics \
       qt
 
-timetool_use            := /reg/g/pcds/dist/pds/10.0.2-p9.0.2/build/timetool
+timetool_use            := /reg/g/pcds/dist/pds/10.1.2-p9.0.3/build/timetool
 timetool_use_include    := $(timetool_use)/include
 timetool_use_lib_x86_64 := $(timetool_use)/lib/x86_64-linux-opt
 timetool_use_lib_rhel6  := $(timetool_use)/lib/x86_64-rhel6-opt
