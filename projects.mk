@@ -31,7 +31,7 @@ gsl_use        := /reg/g/pcds/package/external/gsl-1.13
 boost_use      := /reg/g/pcds/pkg_mgr/release/boost/1.63.0
 ndarray_use    := /reg/common/package/ndarray/1.1.8
 psalg_use      := /reg/common/package/psalg/1.0.11
-pdsdata_use    := /reg/common/package/pdsdata/9.2.1
+pdsdata_use    := /reg/common/package/pdsdata/9.3.1
 
 #
 #  *_use_include definitions will create a directory structure under build for
