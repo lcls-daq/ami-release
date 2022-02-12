@@ -27,11 +27,12 @@ acqiris_use    := /reg/g/pcds/package/external/acqiris_3.3a
 relaxd_use     := /reg/g/pcds/package/external/relaxd-1.9.9
 pvcam_use      := /reg/g/pcds/package/external/pvcam2.7.1.7
 picam_use      := /reg/g/pcds/package/external/picam-2.6.1
-gsl_use        := /reg/g/pcds/package/external/gsl-1.13
+gsl_use        := /reg/g/pcds/package/external/gsl-2.7.1
 boost_use      := /reg/g/pcds/pkg_mgr/release/boost/1.63.0
 ndarray_use    := /reg/common/package/ndarray/1.1.8
-psalg_use      := /reg/common/package/psalg/1.0.11
-pdsdata_use    := /reg/common/package/pdsdata/9.3.1
+psalg_use      := /reg/common/package/psalg/1.0.12
+pdsdata_use    := /reg/common/package/pdsdata/9.3.4
+
 
 #
 #  *_use_include definitions will create a directory structure under build for
@@ -73,7 +74,7 @@ projects += \
       epics \
       qt
 
-timetool_use            := /reg/g/pcds/dist/pds/10.4.0-p9.3.1/build/timetool
+timetool_use            := /reg/g/pcds/dist/pds/10.5.1-p9.3.4/build/timetool
 timetool_use_include    := $(timetool_use)/include
 timetool_use_lib_x86_64 := $(timetool_use)/lib/x86_64-linux-opt
 timetool_use_lib_rhel6  := $(timetool_use)/lib/x86_64-rhel6-opt
