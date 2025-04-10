@@ -31,7 +31,7 @@ gsl_use        := /cds/group/pcds/package/external/gsl-2.7.1
 boost_use      := /cds/group/pcds/pkg_mgr/release/boost/1.63.0
 ndarray_use    := /cds/sw/package/ndarray/1.1.12
 psalg_use      := /cds/sw/package/psalg/1.0.12
-pdsdata_use    := /cds/sw/package/pdsdata/10.1.1
+pdsdata_use    := /cds/sw/package/pdsdata/10.1.2
 
 
 #
@@ -77,7 +77,7 @@ projects += \
       epics \
       qt
 
-timetool_use            := /cds/group/pcds/dist/pds/10.10.2-p10.1.1/build/timetool
+timetool_use            := /cds/group/pcds/dist/pds/10.10.5-p10.1.2/build/timetool
 timetool_use_include    := $(timetool_use)/include
 timetool_use_lib_x86_64 := $(timetool_use)/lib/x86_64-linux-opt
 timetool_use_lib_rhel6  := $(timetool_use)/lib/x86_64-linux-opt
