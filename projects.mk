@@ -77,7 +77,7 @@ projects += \
       epics \
       qt
 
-timetool_use            := /cds/group/pcds/dist/pds/10.11.3-p10.1.3/build/timetool
+timetool_use            := /cds/group/pcds/dist/pds/10.13.3-p10.1.3/build/timetool
 timetool_use_include    := $(timetool_use)/include
 timetool_use_lib_x86_64 := $(timetool_use)/lib/x86_64-linux-opt
 timetool_use_lib_rhel6  := $(timetool_use)/lib/x86_64-linux-opt
