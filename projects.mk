@@ -46,7 +46,7 @@ gsl_use        := $(pkg_ext_dir)/gsl-2.7.1
 boost_use      := $(pkg_mgr_dir)/boost/1.63.0
 ndarray_use    := $(pkg_int_dir)/ndarray/1.1.12
 psalg_use      := $(pkg_int_dir)/psalg/1.0.12
-pdsdata_use    := $(pkg_int_dir)/pdsdata/10.2.3
+pdsdata_use    := $(pkg_int_dir)/pdsdata/10.2.4
 
 
 #
