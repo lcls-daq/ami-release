@@ -13,6 +13,9 @@ endif
 ifneq ($(findstring el7,$(src_arch)),)
 arch_tgts_q := x86_64-rhel7
 endif
+ifneq ($(findstring el8,$(src_arch)),)
+arch_tgts_q := x86_64-rhel8
+endif
 ifneq ($(findstring el9,$(src_arch)),)
 arch_tgts_q := x86_64-rhel9
 endif
@@ -44,6 +47,25 @@ LXFLAGS  := -m32
 USRLIBDIR := /usr/lib
 else
 ifneq ($(findstring x86_64-rhel9,$(tgt_arch)),)
+AS  := as
+CPP := gcc -E
+CC  := gcc
+CXX := g++
+LD  := g++
+LX  := g++
+
+LIBEXTNS := so
+DEPFLAGS := -MM
+DEFINES  := -fPIC -D_REENTRANT -D__pentium__ -Wall
+CPPFLAGS :=
+CFLAGS   := -m64
+CXXFLAGS := $(CFLAGS) -std=c++11
+CASFLAGS := -x assembler-with-cpp -P $(CFLAGS)
+LDFLAGS  := -m64 -shared
+LXFLAGS  := -m64
+USRLIBDIR := /usr/lib64
+else
+ifneq ($(findstring x86_64-rhel8,$(tgt_arch)),)
 AS  := as
 CPP := gcc -E
 CC  := gcc
@@ -132,7 +154,7 @@ endif
 endif
 endif
 endif
-
+endif
 
 ifneq ($(findstring -opt,$(tgt_arch)),)
 DEFINES += -O4
